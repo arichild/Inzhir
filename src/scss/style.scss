@@ -2,14 +2,14 @@
 @import "./base/vars.scss";
 @import "./base/typography.scss";
 @import "./base/grid.scss";
-@import "./base/mixin.scss";
 
 /* layout */
 @import "./layout/inc-header.scss";
 @import "./layout/inc-footer.scss";
 
 /* pages */
-@import "index";
+@import "rating";
+@import "personal-page";
 
 * {
   box-sizing: border-box;
@@ -32,10 +32,10 @@ body {
   min-height: 100%;
   font-family: $baseFont;
   font-weight: 400;
-  font-size: rem(16px);
-  line-height: 1.42;
-  color: #000;
-  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $black;
+  background-color: $grayBackgroud;
 }
 
 #wrapper {

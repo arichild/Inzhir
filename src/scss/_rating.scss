@@ -1,0 +1,106 @@
+.rating {
+  &-block {
+    padding: 4px 4px 4px 8px;
+    background: #fff;
+    border-radius: 24px;
+
+    &.mb-56 {
+      margin-bottom: 56px;
+    }
+
+    &-info {
+      width: 100%;
+      background: #f7f4f9;
+      border-radius: 24px;
+      margin-bottom: 8px;
+      padding: 8px 12px 24px 12px;
+    }
+
+    &-statistics {
+      padding: 0 12px;
+    }
+
+    &-txt {
+      text-align: center;
+      color: $grey;
+      font-size: 12px;
+      max-width: 92px;
+      width: 100%;
+
+      span {
+        display: block;
+      }
+    }
+
+    &-personality {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-position {
+      font-weight: 600;
+      color: $grey;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    &-img {
+      max-width: 100px;
+      height: 100px;
+      margin: 0 auto 8px;
+
+      img {
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    &-subtitle {
+      margin-bottom: 8px;
+    }
+
+    &-date {
+      color: $grey;
+      font-size: 12px;
+    }
+
+    &-num {
+      max-width: 124px;
+      width: 100%;
+      font-size: 24px;
+      margin-right: 4px;
+      text-align: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  top: -28px;
+	height: 305px;
+	transform: rotate(-6.19deg);
+  border-radius: 24px;
+  background: linear-gradient(90deg, #E64A70 0%, #B44AE6 102.15%);
+  z-index: 1;
+}
+
+.black {
+  position: absolute;
+  width: 100%;
+  top: -28px;
+	height: 305px;
+	transform: rotate(-13.27deg);
+  border-radius: 24px;
+  background: $black;
+  z-index: 0;
+}

@@ -1,10 +1,20 @@
 /* container */
 $widthContainer: 1196px;
-$paddingContainer: 20px;
+$paddingContainer: 8px;
 
 /* base typography */
-$baseFont: "Open Sans", sans-serif;
-$baseWeight: 300;
+$baseFont: 'Nunito Sans', sans-serif;
+$baseWeight: 400;
 
 /* colors */
 $linkColor: #000; /* base color for <a> */
+
+$accent: #5C267E;
+$goodResult: #8FC635;
+$mediocreResult: #FFAB06;
+$BadResult: #E64A70;
+
+$grey: #B3B3B3;
+$lightGrey: #DADADA;
+$grayBackgroud: #F6F6F6;
+$black: #101010;
