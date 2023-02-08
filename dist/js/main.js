@@ -48,7 +48,7 @@ if(document.querySelector('.personal-statistics-chart.steps')) {
         data: arrChartData,
         label: "Шаги за последние две недели",
         backgroundColor: "#5C267E",
-        barPercentage: 0.2
+        barPercentage: 0.1
       },
     ]
   };
@@ -85,7 +85,7 @@ if(document.querySelector('.personal-statistics-chart.water')) {
         data: arrChartData,
         label: "Вода за последние две недели",
         backgroundColor: "#5C267E",
-        barPercentage: 0.2
+        barPercentage: 0.1
       },
     ]
   };
