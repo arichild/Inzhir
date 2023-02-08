@@ -29,7 +29,7 @@ h5,
   color: #000;
   text-transform: none;
   line-height: 1.42;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -48,12 +48,15 @@ h3,
 .h3 {
   margin-top: 30px;
   font-size: 24px;
+  font-weight: 700;
 }
 
 h4,
 .h4 {
   margin-top: 30px;
   font-size: 16px;
+  font-weight: 700;
+
 }
 
 h5,
@@ -66,6 +69,10 @@ a {
   color: $linkColor;
   text-decoration: none;
   outline: none;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 img {

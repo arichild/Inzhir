@@ -1,24 +1,42 @@
 .personal {
   &-results {
-    padding: 32px 41px;
+    padding: 32px 10px;
     background: #fff;
     text-align: center;
     border-radius: 24px;
     margin-bottom: 8px;
 
+    @media(max-width: 360px) {
+      padding: 25px 10px;
+    }
+
+    &-list {
+      justify-content: center;
+    }
+
     &-weight {
       font-size: 56px;
       margin-bottom: 5px;
 
+      @media(max-width: 360px) {
+        font-size: 40px;
+      }
+
       span {
         font-size: 14px;
         font-weight: 600;
+        position: relative;
+        right: 10px;
       }
     }
 
     &-date {
       font-size: 12px;
       margin-bottom: 32px;
+
+      @media(max-width: 360px) {
+        margin-bottom: 20px;
+      }
     }
 
     &-info {
@@ -30,6 +48,10 @@
         font-size: 24px;
         margin-bottom: 10px;
 
+        @media(max-width: 360px) {
+          font-size: 20px;
+        }
+
         span {
           font-size: 14px;
           font-weight: 600;
@@ -40,6 +62,10 @@
         font-size: 12px;
         padding-left: 16px;
         position: relative;
+
+        @media(max-width: 360px) {
+          padding-left: 13px;
+        }
 
         &.plus {
           &::before {
@@ -67,6 +93,202 @@
           }
         }
       }
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+
+    @media(max-width: 360px) {
+      margin-bottom: 70px;
+    }
+
+    &-link {
+      position: relative;
+      padding-top: 58px;
+      z-index: 2;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      align-items: center;
+
+      a {
+        color: #fff;
+        padding-left: 30px;
+        font-size: 14px;
+        position: relative;
+        font-weight: 600;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -5px;
+          width: 24px;
+          height: 24px;
+          background: url(../images/icon/arrow-back.svg) center/contain no-repeat;
+        }
+      }
+    }
+
+    &-img {
+      line-height: 0;
+    }
+
+    .gradient {
+      position: absolute;
+      width: 108%;
+      top: -50px;
+      left: 0;
+      height: 484px;
+      transform: rotate(-8deg);
+      border-radius: 24px;
+      background: linear-gradient(90deg, #E64A70 0%, #B44AE6 102.15%);
+      z-index: 0;
+
+      @media(max-width: 430px) {
+        width: 115%;
+      }
+
+      @media(max-width: 360px) {
+        height: 456px;
+      }
+    }
+
+    .black {
+      position: absolute;
+      width: 82%;
+      top: 126px;
+      left: 10px;
+      height: 305px;
+      transform: rotate(-4deg);
+      border-radius: 24px;
+      background: $black;
+      z-index: 1;
+
+      @media(max-width: 430px) {
+        left: 0;
+      }
+
+      @media(max-width: 360px) {
+        top: 106px;
+        height: 285px;
+      }
+    }
+  }
+
+  &-statistics {
+    padding: 24px 10px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 8px;
+
+    &-summary {
+      margin-bottom: 24px;
+    }
+
+    &-chart {
+      max-width: 329px;
+      width: 100%;
+      margin: 0 auto;
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    &-progress {
+      position: relative;
+      text-align: center;
+      margin-bottom: 23px;
+      max-width: 296px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 24px;
+
+      svg {
+        fill: #DADADA;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .red-status {
+        fill: $badResult;
+      }
+
+      .orange-status {
+        fill: $mediocreResult;
+      }
+
+      .green-status {
+        fill: $goodResult;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      max-width: 200px;
+      width: 100%;
+    }
+
+    &-icon {
+      margin-bottom: 6px;
+      line-height: 0 ;
+    }
+
+    &-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+
+      &.red {
+        color: $badResult;
+      }
+
+      &.green {
+        color: $goodResult;
+      }
+
+      &.orange {
+        color: $mediocreResult;
+      }
+    }
+
+    &-subtitle {
+      font-size: 40px;
+      line-height: 1;
+
+      span {
+        font-size: 12px;
+        line-height: 1.2;
+      }
+    }
+
+    &-desc {
+      font-size: 12px;
+    }
+
+    &-summary {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    &-txt {
+      margin-bottom: 16px;
+      color: $grey;
+    }
+
+    &-total {
+      margin-bottom: 4px;
+    }
+
+    &-group {
+      font-size: 12px;
     }
   }
 }
