@@ -1,6 +1,6 @@
 .rating {
   &-block {
-    padding: 4px 4px 4px 8px;
+    padding: 4px;
     background: #fff;
     border-radius: 24px;
     margin-bottom: 8px;
@@ -17,15 +17,15 @@
     }
 
     &-info {
-      width: 100%;
+      // width: 100%;
       background: #f7f4f9;
-      border-radius: 24px;
-      margin-bottom: 8px;
+      border-radius: 20px;
+      // margin-bottom: 8px;
       padding: 8px 12px 24px 12px;
     }
 
     &-statistics {
-      padding: 0 12px;
+      padding: 0 10px;
     }
 
     &-txt {
@@ -33,6 +33,7 @@
       color: $grey;
       font-size: 12px;
       max-width: 92px;
+      padding: 8px 2px;
       width: 100%;
 
       span {
@@ -57,17 +58,24 @@
     }
 
     &-img {
-      max-width: 100px;
-      width: 100%;
-      height: 100%;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      // width: 100%;
+      // height: 100%;
       margin: 0 auto 8px;
+      border-radius: 50%;
 
       @media(max-width: 360px) {
-        max-width: 65px;
+        width: 65px;
+        height: 65px;
       }
 
       img {
-        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -112,7 +120,7 @@
       padding: 8px 12px 8px 4px;
       background: #f7f4f9;
       border-radius: 20px;
-      margin-bottom: 8px;
+      // margin-bottom: 8px;
     }
 
     &-results {
@@ -127,18 +135,23 @@
     }
 
     &-img {
-      max-width: 64px;
-      width: 100%;
-      flex: 0 0 64px;
-      height: 100%;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      overflow: hidden;
+      // flex: 0 0 64px;
       margin-right: 12px;
+      border-radius: 50%;
 
       @media(max-width: 360px) {
-        max-width: 42px;
+        width: 42px;
+        height: 42px;
       }
 
       img {
-        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -227,7 +240,7 @@
     font-weight: 600;
   }
 
-  .gradient {
+  .ui-bg-gradient {
     position: absolute;
     width: 115%;
     top: -45px;
@@ -239,7 +252,7 @@
     z-index: 1;
   }
 
-  .black {
+  .ui-bg-black {
     position: absolute;
     width: 108%;
     top: -18px;
