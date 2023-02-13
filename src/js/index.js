@@ -1,106 +1,50 @@
 // chart.js
-if(document.querySelector('.personal-statistics-chart.weight')) {
-  const ctx = document.getElementById('chart-weight');
-  const chart = document.querySelector('.personal-statistics-chart.weight')
+if(document.querySelectorAll('.personal-statistics-chart')) {
+  let allBlockChart = document.querySelectorAll('.personal-statistics-chart');
 
-  const chartLabels = chart.dataset.labels
-  const arrChartLabels = (chartLabels.split(','))
+  allBlockChart.forEach((item) => {
+    let collectionJSON = item.dataset.info;
+    let title = item.dataset.title;
+    let color = item.dataset.color;
+    let type = item.dataset.type;
 
-  const chartData = chart.dataset.data
-  const arrChartData = (chartData.split(','))
+    let parseJSON = JSON.parse(collectionJSON);
+
+    let arrLabels = Object.keys(parseJSON);
+    let arrValue = Object.values(parseJSON);
+
+    chartBuild(arrLabels, arrValue, item, title, color, type)
+  })
+}
+
+function chartBuild(arrLabels, arrValue, canvas, ...desc) {
+  let canvasBlock = canvas.children[0]
+  let title
+  let color
+  let type
+
+  [title, color, type] = [...desc]
 
   const data = {
-    labels: arrChartLabels,
+    labels: arrLabels,
     datasets: [
       {
-        data: arrChartData,
-        label: "Взвешивания за последние две недели",
-        borderColor: "#E64A70"
+        data: arrValue,
+        label: title,
+        borderColor: color,
+        barPercentage: 0.1,
+        backgroundColor: color,
       },
     ]
   };
 
   const config = {
-    type: 'line',
+    type: type,
     data: data,
     options: {
       responsive: true,
     },
   };
 
-  const chartWeight = new Chart(ctx, config);
-}
-
-if(document.querySelector('.personal-statistics-chart.steps')) {
-  const ctx = document.getElementById('chart-steps');
-  const chart = document.querySelector('.personal-statistics-chart.steps')
-
-  const chartLabels = chart.dataset.labels
-  const arrChartLabels = (chartLabels.split(','))
-
-  const chartData = chart.dataset.data
-  const arrChartData = (chartData.split(','))
-
-  const data = {
-    labels: arrChartLabels,
-    datasets: [
-      {
-        data: arrChartData,
-        label: "Шаги за последние две недели",
-        backgroundColor: "#5C267E",
-        barPercentage: 0.1
-      },
-    ]
-  };
-
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        }
-      }
-    },
-  };
-
-  const chartSteps = new Chart(ctx, config);
-}
-
-if(document.querySelector('.personal-statistics-chart.water')) {
-  const ctx = document.getElementById('chart-water');
-  const chart = document.querySelector('.personal-statistics-chart.water')
-
-  const chartLabels = chart.dataset.labels
-  const arrChartLabels = (chartLabels.split(','))
-
-  const chartData = chart.dataset.data
-  const arrChartData = (chartData.split(','))
-
-  const data = {
-    labels: arrChartLabels,
-    datasets: [
-      {
-        data: arrChartData,
-        label: "Вода за последние две недели",
-        backgroundColor: "#5C267E",
-        barPercentage: 0.1
-      },
-    ]
-  };
-
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        }
-      }
-    },
-  };
-
-  const chartWater = new Chart(ctx, config);
+  const chartInit = new Chart(canvasBlock, config);
 }

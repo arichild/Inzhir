@@ -33,32 +33,6 @@
     }
   }
 
-  &-bg{
-    &-gradient {
-      position: absolute;
-      width: 108%;
-      top: -50px;
-      left: 0;
-      height: 484px;
-      transform: rotate(-8deg);
-      border-radius: 24px;
-      background: linear-gradient(90deg, #E64A70 0%, #B44AE6 102.15%);
-      z-index: 0;
-    }
-
-    &-black {
-      position: absolute;
-      width: 82%;
-      top: 126px;
-      left: 10px;
-      height: 305px;
-      transform: rotate(-4deg);
-      border-radius: 24px;
-      background: $black;
-      z-index: 1;
-    }
-  }
-
   &-unit {
     font-size: 14px;
     font-weight: 600;
