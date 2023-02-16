@@ -159,26 +159,24 @@
       margin-bottom: 24px;
 
       svg {
-        fill: #DADADA;
+        // fill: #DADADA;
         display: block;
         max-width: 100%;
         max-height: 100%;
       }
 
-      &.progress-red {
-        .sector-1, .sector-2, .sector-3, .sector-4, .sector-5 {
+      .sector-1, .sector-2, .sector-3, .sector-4, .sector-5 {
+        fill: #DADADA;
+
+        &.fill-red {
           fill: $badResult;
         }
-      }
 
-      &.progress-orange {
-        .sector-1, .sector-2, .sector-3, .sector-4, .sector-5 {
+        &.fill-orange {
           fill: $mediocreResult;
         }
-      }
 
-      &.progress-green {
-        .sector-1, .sector-2, .sector-3, .sector-4, .sector-5 {
+        &.fill-green {
           fill: $goodResult;
         }
       }
