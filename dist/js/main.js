@@ -3,22 +3,24 @@ if(document.querySelectorAll('.personal-statistics-chart')) {
   let allBlockChart = document.querySelectorAll('.personal-statistics-chart');
 
   allBlockChart.forEach((item) => {
-    let collectionJSON = item.dataset.info;
-    let title = item.dataset.title;
-    let color = item.dataset.color;
-    let type = item.dataset.type;
+    const collectionJSON = item.dataset.info;
+    const title = item.dataset.title || 'Статистика';
+    const color = item.dataset.color || '#E64A70';
+    const type = item.dataset.type;
 
-    let parseJSON = JSON.parse(collectionJSON);
+    if(!collectionJSON || !type) return
 
-    let arrLabels = Object.keys(parseJSON);
-    let arrValue = Object.values(parseJSON);
+    const parseJSON = JSON.parse(collectionJSON);
+
+    const arrLabels = Object.keys(parseJSON);
+    const arrValue = Object.values(parseJSON);
 
     chartBuild(arrLabels, arrValue, item, title, color, type)
   })
 }
 
 function chartBuild(arrLabels, arrValue, canvas, ...desc) {
-  let canvasBlock = canvas.children[0]
+  const canvasBlock = canvas.children[0]
   let title
   let color
   let type

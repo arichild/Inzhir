@@ -9,6 +9,7 @@
 
     &-list {
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     &-weight {
@@ -29,28 +30,31 @@
 
     &-date {
       font-size: 12px;
-      margin-bottom: 32px;
 
       @media(max-width: 360px) {
         margin-bottom: 20px;
       }
     }
 
-    &-info {
-      max-width: 112px;
-      width: 100%;
+    &-weighting {
+      margin-bottom: 32px;
+    }
 
-      .title {
-        display: block;
+    &-info {
+      max-width: 33.3%;
+      flex: 0 0 33.3%;
+
+      &-weight {
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        line-height: 1;
 
         @media(max-width: 360px) {
           font-size: 20px;
         }
       }
 
-      .subtitle {
+      &-progress {
         font-size: 12px;
         padding-left: 16px;
         position: relative;
@@ -108,27 +112,6 @@
     &-img {
       line-height: 0;
     }
-
-    .ui-bg-gradient {
-      @media(max-width: 430px) {
-        width: 115%;
-      }
-
-      @media(max-width: 360px) {
-        height: 456px;
-      }
-    }
-
-    .ui-bg-black {
-      @media(max-width: 430px) {
-        left: 0;
-      }
-
-      @media(max-width: 360px) {
-        top: 106px;
-        height: 285px;
-      }
-    }
   }
 
   &-statistics {
@@ -156,10 +139,18 @@
       max-width: 296px;
       width: 100%;
       margin: 0 auto;
-      margin-bottom: 24px;
+      margin-bottom: 15px;
+      min-height: 150px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-top: 18px;
 
       svg {
         // fill: #DADADA;
+        position: absolute;
+        left: 0;
+        top: 0;
         display: block;
         max-width: 100%;
         max-height: 100%;
@@ -183,12 +174,9 @@
     }
 
     &-info {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
       max-width: 200px;
       width: 100%;
+      margin: 0 auto;
     }
 
     &-icon {
