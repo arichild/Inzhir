@@ -1,6 +1,6 @@
 .personal {
   &-results {
-    padding: 32px 10px;
+    padding: 32px 10px 26px 10px;
     text-align: center;
 
     @media(max-width: 360px) {
@@ -37,12 +37,13 @@
     }
 
     &-weighting {
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
 
     &-info {
       max-width: 33.3%;
       flex: 0 0 33.3%;
+      padding: 6px 4px;
 
       &-weight {
         font-size: 24px;

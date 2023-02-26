@@ -1,12 +1,12 @@
 // chart.js
-if(document.querySelectorAll('.personal-statistics-chart')) {
+if(document.querySelectorAll('.personal-statistics-chart').length !== 0) {
   let allBlockChart = document.querySelectorAll('.personal-statistics-chart');
 
   allBlockChart.forEach((item) => {
-    const collectionJSON = item.dataset.info;
+    const collectionJSON = item.dataset.info || null;
     const title = item.dataset.title || 'Статистика';
     const color = item.dataset.color || '#E64A70';
-    const type = item.dataset.type;
+    const type = item.dataset.type || null;
 
     if(!collectionJSON || !type) return
 

@@ -24,7 +24,7 @@
     &-info {
       background: #f7f4f9;
       border-radius: 20px;
-      padding: 8px 12px 24px 12px;
+      padding: 8px 12px 18px 12px;
       margin-bottom: 8px;
 
       @media(max-width: 360px) {
@@ -53,7 +53,7 @@
 
     &-personality {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
 
       @media(max-width: 360px) {
         margin-bottom: 18px;
@@ -113,8 +113,9 @@
       max-width: 33.3%;
       flex: 0 0 33.3%;
       font-size: 24px;
-      padding: 0 4px;
+      padding: 6px 4px;
       text-align: center;
+      line-height: 1;
 
       @media(max-width: 360px) {
         font-size: 20px;
@@ -139,6 +140,7 @@
       position: relative;
       width: 64px;
       height: 64px;
+      flex: 0 0 64px;
       overflow: hidden;
       margin-right: 12px;
       border-radius: 50%;
@@ -146,6 +148,7 @@
       @media(max-width: 360px) {
         width: 52px;
         height: 52px;
+        flex: 0 0 52px;
       }
 
       img {
