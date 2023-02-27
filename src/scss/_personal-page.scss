@@ -38,12 +38,14 @@
 
     &-weighting {
       margin-bottom: 26px;
+      line-height: 1;
     }
 
     &-info {
       max-width: 33.3%;
       flex: 0 0 33.3%;
       padding: 6px 4px;
+      line-height: 1;
 
       &-weight {
         font-size: 24px;
@@ -141,11 +143,11 @@
       width: 100%;
       margin: 0 auto;
       margin-bottom: 15px;
-      min-height: 150px;
+      min-height: 145px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-top: 18px;
+      padding-top: 24px;
 
       svg {
         // fill: #DADADA;
@@ -155,6 +157,7 @@
         display: block;
         max-width: 100%;
         max-height: 100%;
+        z-index: 0;
       }
 
       .sector-1, .sector-2, .sector-3, .sector-4, .sector-5 {
@@ -178,6 +181,9 @@
       max-width: 200px;
       width: 100%;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      line-height: 1;
     }
 
     &-icon {
